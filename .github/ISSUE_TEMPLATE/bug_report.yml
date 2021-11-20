@@ -1,4 +1,4 @@
-name: 'Bug report'
+name: Bug report
 description: Create a bug report
 body:
   - type: markdown
@@ -11,38 +11,47 @@ body:
 
         Please fill in as much of the template below as you're able.
   - type: checkboxes
+    id: duplicate
     attributes:
+      label: This is not a duplicate issue
       options:
         - label:
             I've searched for any related issues and avoided creating a
             duplicate issue.
           required: true
   - type: textarea
+    id: description
     attributes:
       label: Description
       description:
         Description of the bug or feature, preferably a simple code snippet that
         can be run directly without installing third-party dependencies.
   - type: input
+    id: ws-version
     attributes:
       label: ws version
   - type: input
+    id: node-version
     attributes:
       label: Node.js Version
       description: Output of `node -v`.
   - type: textarea
+    id: platform
     attributes:
       label: System
       description: Output of `npx envinfo --system`.
   - type: textarea
+    id: expected-result
     attributes:
       label: Expected result
       description: What you expected to happen.
   - type: textarea
+    id: actual-result
     attributes:
       label: Actual result
       description: What actually happened.
   - type: textarea
+    id: attachments
     attributes:
       label: Attachments
       description: Logs, screenshots, screencast, etc.
